@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "177513223016",
+    "project_id": "happynewyear-131e8",
+    "storage_bucket": "happynewyear-131e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177513223016:android:036b927e59c966d7f67cdd",
+        "android_client_info": {
+          "package_name": "com.flutter.happynewyear2023"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177513223016-70nvgqe0rdu3f2do8bf4oa20q153hk4j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApYoevesNPmikTm2Gwc5mDt_wtCwChPFs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177513223016-70nvgqe0rdu3f2do8bf4oa20q153hk4j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
