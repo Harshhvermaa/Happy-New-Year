@@ -90,7 +90,6 @@ class HomescreenState extends State<Homescreen> {
               ),
             ],
           ),
-
           Column(
             children: [
               SizedBox(
@@ -98,7 +97,7 @@ class HomescreenState extends State<Homescreen> {
               ),
 
               Text(
-                "Please select a Image",
+                "Please choose Image" ,
                 style: GoogleFonts.lato(
                     color: const Color.fromARGB(255, 255, 255, 255),
                     fontSize: 30.0.sp,
@@ -188,7 +187,8 @@ class HomescreenState extends State<Homescreen> {
                             color: Colors.black,
                             fontSize: 30.0.sp,
                             fontWeight: FontWeight.bold),
-                      )),
+                      ),
+                  ),
                 ),
               ),
             ],

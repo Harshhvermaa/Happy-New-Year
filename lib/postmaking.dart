@@ -5,8 +5,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:photo_view/photo_view.dart';
 import 'package:share_files_and_screenshot_widgets/share_files_and_screenshot_widgets.dart';
-
+import 'package:widgets_to_image/widgets_to_image.dart';
 import 'adsController/adscontroller.dart';
 import 'frames/frames.dart';
 
@@ -87,26 +88,46 @@ class postMakingScreenState extends State<postMakingScreen> {
               width: double.maxFinite,
               child: Stack(
                 children: [
-                  Positioned(
-                    left: left,
-                    right: right,
-                    bottom: bottom,
-                    top: top,
-                    child: SizedBox(
-                      height: 500.h,
-                      width: double.infinity,
-                      child: Image.file(
-                        fit: BoxFit.scaleDown,
-                        File(widget.xfile!.path.toString()),
+                  GestureDetector(
+                    onTap: (){
+                      print("object");
+                    },
+                    child: Positioned(
+                      left: left,
+                      right: right,
+                      bottom: bottom,
+                      top: top,
+                      child: SizedBox(
+                        height: 500.h,
+                        width: double.infinity,
+                        child:InteractiveViewer(
+                          panEnabled: true,
+                          alignPanAxis: true,
+                          scaleEnabled: true,
+                          boundaryMargin: EdgeInsets.all(100),
+                          minScale: 0.5,
+                          maxScale: 2,
+                          child: Image.file(
+                              File(widget.xfile!.path.toString()),
                       ),
+                        ),
+                    ),
                     ),
                   ),
-                  SizedBox(
-                    height: 500.h,
-                    width: double.infinity,
-                    child: Image.asset(
-                      _currentFrame,
-                      fit: BoxFit.fill,
+                  IgnorePointer(
+                    ignoring: true,
+                    child: GestureDetector(
+                      onTap: (){
+                        print("object2");
+                      },
+                      child: SizedBox(
+                        height: 500.h,
+                        width: double.infinity,
+                        child: Image.asset(
+                          _currentFrame,
+                          fit: BoxFit.fill,
+                        ),
+                      ),
                     ),
                   ),
                 ],
